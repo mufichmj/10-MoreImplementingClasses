@@ -227,6 +227,7 @@ class Line(object):
         # --------------------------------------------------------------
         self.start = start.clone()
         self.end = end.clone()
+
     def __repr__(self):
         """
         What comes in:
@@ -410,6 +411,13 @@ class Line(object):
         #        The tests are already written (below).
         #        They include the Example in the above doc-string.
         # --------------------------------------------------------------
+        if self.start.x == self.end.x:
+            return math.inf
+        else:
+            xvalues = (self.start.x - self.end.x)
+            yvalues = (self.start.y - self.end.y)
+            slope = (yvalues / xvalues)
+        return slope
 
     def length(self):
         """
