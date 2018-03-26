@@ -562,7 +562,7 @@ class Line(object):
           :rtype: Line:
         """
         # --------------------------------------------------------------
-        # TODO: 10.
+        # DONE: 10.
         #   a. READ the above specification, including the Example.
         #        ** ASK QUESTIONS AS NEEDED. **
         #        ** Be sure you understand it, ESPECIALLY the Example.
@@ -570,6 +570,9 @@ class Line(object):
         #        The tests are already written (below).
         #        They include the Example in the above doc-string.
         # --------------------------------------------------------------
+        sum_start = Point((self.start.x - other_line.start.x), (self.start.y - other_line.start.y))
+        sum_end = Point((self.end.x - other_line.end.x), (self.end.y - other_line.end.y))
+        return Line(sum_start, sum_end)
 
     def midpoint(self):
         """
