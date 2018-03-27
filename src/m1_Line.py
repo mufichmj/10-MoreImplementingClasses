@@ -665,6 +665,18 @@ class Line(object):
         # and (usually) adequate to distinguish numbers that really
         # are different from each other.
         ################################################################
+        if self.start.x == line2.start.x:
+            if self.end.x == line2.end.x:
+                return True
+            else:
+                return False
+        if self.start.y == line2.start.y:
+            if self.end.y == line2.end.y:
+                return True
+            else:
+                return False
+
+
 
     def reset(self):
         """
@@ -704,7 +716,9 @@ class Line(object):
         #        The tests are already written (below).
         #        They include the Example in the above doc-string.
         # --------------------------------------------------------------
-
+        start = self.start
+        end = self.end
+        return Line(start, end)
 
 ########################################################################
 # The TEST functions for the  Line  class begin here.
