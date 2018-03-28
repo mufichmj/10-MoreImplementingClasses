@@ -631,7 +631,7 @@ class Line(object):
           :rtype: bool
         """
         # --------------------------------------------------------------
-        # TODO: 12.
+        # DONE: 12.
         #   a. READ the above specification, including the Example.
         #        ** ASK QUESTIONS AS NEEDED. **
         #        ** Be sure you understand it, ESPECIALLY the Example.
@@ -665,16 +665,10 @@ class Line(object):
         # and (usually) adequate to distinguish numbers that really
         # are different from each other.
         ################################################################
-        if self.start.x == line2.start.x:
-            if self.end.x == line2.end.x:
-                return True
-            else:
-                return False
-        if self.start.y == line2.start.y:
-            if self.end.y == line2.end.y:
-                return True
-            else:
-                return False
+        if round(self.slope(), 12) == round(line2.slope(), 12):
+            return True
+        else:
+            return False
 
 
 
@@ -716,9 +710,9 @@ class Line(object):
         #        The tests are already written (below).
         #        They include the Example in the above doc-string.
         # --------------------------------------------------------------
-        start = self.start
-        end = self.end
-        return Line(start, end)
+        self.start =
+        self.end =
+
 
 ########################################################################
 # The TEST functions for the  Line  class begin here.

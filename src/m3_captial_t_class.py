@@ -234,7 +234,7 @@ class CapitalT(object):
         #     self.distance = self.distance + math.sqrt((dx ** 2) + (dy ** 2))
         self.x = self.x + dx
         self.y = self.y + dy
-        
+
 
     def clone(self):
         """
