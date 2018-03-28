@@ -228,6 +228,12 @@ class CapitalT(object):
         #     move_by.pdf. Note: the pdf shows the different locations
         #     that the T moves through, but there is only 1 T at any moment.
         # --------------------------------------------------------------
+        # def move_by(self, dx, dy):
+        #     self.x = self.x + dx
+        #     self.y = self.y + dy
+        #     self.distance = self.distance + math.sqrt((dx ** 2) + (dy ** 2))
+        self.x = self.x + dx
+        self.y = self.y + dy
         
 
     def clone(self):
