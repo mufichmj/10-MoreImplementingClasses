@@ -142,6 +142,14 @@ class CapitalT(object):
         #   Implement this method
         #   Note: you will need to also implement attach_to before testing
         # --------------------------------------------------------------
+        upper_right_corner = rg.Point(width / 2 + intersection_center.x, letter_thickness / 2 - intersection_center.y)
+        lower_left_corner = rg.Point(width / 2 - intersection_center.x, letter_thickness / 2 + intersection_center.y)
+        self.h_rect = rg.Rectangle(upper_right_corner, lower_left_corner)
+
+        top_right_corner = rg.Point(letter_thickness / 2 + intersection_center.x, intersection_center.y - letter_thickness / 2)
+        bottom_left_corner = rg.Point(letter_thickness / 2 - intersection_center.x, intersection_center.y + letter_thickness / 2)
+        self.v_rect = rg.Rectangle(top_right_corner, bottom_left_corner)
+        
 
     def attach_to(self, window):
         """
@@ -167,7 +175,7 @@ class CapitalT(object):
         #   Implement and test this method by looking at the console and
         #     the graphics window (compare it to simple_t.pdf)
         # --------------------------------------------------------------
-
+        self.attach_to(window)
 
 
     def set_colors(self, fill_color, outline_color):
