@@ -149,7 +149,7 @@ class CapitalT(object):
         top_right_corner = rg.Point(letter_thickness / 2 + intersection_center.x, intersection_center.y - letter_thickness / 2)
         bottom_left_corner = rg.Point(letter_thickness / 2 - intersection_center.x, intersection_center.y + letter_thickness / 2)
         self.v_rect = rg.Rectangle(top_right_corner, bottom_left_corner)
-        
+
 
     def attach_to(self, window):
         """
